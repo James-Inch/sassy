@@ -3,6 +3,7 @@ var connection = require("../config/connection.js");
 
 //Routes 
 module.exports = function(app) {
+    // Get all messages 
     app.get("/api/all", function(req,res) {
         var dbQuery = "SELECT * FROM messages";
 
@@ -10,5 +11,12 @@ module.exports = function(app) {
           if (err) throw err;
           res.json(result);
         });
-    })
+    });
+
+    // Add message 
+    
 };
+
+
+
+
