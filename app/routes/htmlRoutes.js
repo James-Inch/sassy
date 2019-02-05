@@ -4,7 +4,7 @@ var path = require("path");
 module.exports = function(app) { 
     // load Landing page 
     app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/views/index.html"));
+        res.send(path.join(__dirname, "../public/views/index.html"));
     });
     // Load message page
     app.get("/messages", function(req, res) {
